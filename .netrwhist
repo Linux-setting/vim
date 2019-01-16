@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/ics/ics2018/nanos-lite'
+let g:netrw_dirhist_2='/home/ics'
+let g:netrw_dirhist_3='/home/ics/ics2018/nanos-lite/include'
+let g:netrw_dirhist_4='/home/ics/ics2018/nexus-am/am/arch/x86-nemu/src/devices'
+let g:netrw_dirhist_5='/usr/lib/python3/dist-packages'
+let g:netrw_dirhist_6='/home/ics/ics2018/nanos-lite/build'
+let g:netrw_dirhist_7='/home/ics/ics2018/nemu/src/memory'
