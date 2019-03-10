@@ -2,10 +2,13 @@ let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 argglobal
 let s:cpo_save=&cpo
 set cpo&vim
+nmap <buffer>  hp <Plug>GitGutterPreviewHunk
+nmap <buffer>  hu <Plug>GitGutterUndoHunk
+nmap <buffer>  hs <Plug>GitGutterStageHunk
+nmap <buffer> ;hp <Plug>GitGutterPreviewHunk
+nmap <buffer> ;hu <Plug>GitGutterUndoHunk
+nmap <buffer> ;hs <Plug>GitGutterStageHunk
 nmap <buffer> [c <Plug>GitGutterPrevHunk
-nmap <buffer> \hp <Plug>GitGutterPreviewHunk
-nmap <buffer> \hu <Plug>GitGutterUndoHunk
-nmap <buffer> \hs <Plug>GitGutterStageHunk
 nmap <buffer> ]c <Plug>GitGutterNextHunk
 xmap <buffer> ac <Plug>GitGutterTextObjectOuterVisual
 omap <buffer> ac <Plug>GitGutterTextObjectOuterPending
@@ -34,7 +37,7 @@ setlocal commentstring=>\ %s
 setlocal complete=.,w,b,u,t
 setlocal concealcursor=
 setlocal conceallevel=0
-setlocal completefunc=Myfunc()
+setlocal completefunc=
 setlocal nocopyindent
 setlocal cryptmethod=
 setlocal nocursorbind
@@ -129,12 +132,13 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 145 - ((39 * winheight(0) + 21) / 43)
+let s:l = 20 - ((19 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-145
-normal! 06|
+20
+normal! 016|
+lcd ~/
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :
