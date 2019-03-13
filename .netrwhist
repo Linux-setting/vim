@@ -1,11 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/lynx/blog/themes/next/layout'
-let g:netrw_dirhist_2='/home/lynx/blog/source/_posts/npm命令笔记'
-let g:netrw_dirhist_3='/home/lynx/blog/source/_posts/VPN'
-let g:netrw_dirhist_4='/home/lynx/.vim'
-let g:netrw_dirhist_5='/home/lynx/os-workbench/abstract-machine/klib'
-let g:netrw_dirhist_6='/home/lynx/os-workbench/amgame/src'
-let g:netrw_dirhist_7='/home/lynx/os-workbench/abstract-machine/libs/klib/include'
-let g:netrw_dirhist_8='/home/lynx/blog/source/_posts/vimrc笔记'
-let g:netrw_dirhist_9='/home/lynx/vim-sb-complete'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/lynx/blog/source'
+let g:netrw_dirhist_2='/home/lynx/blog/source/tags'
+let g:netrw_dirhist_3='/home/lynx/my_rc'

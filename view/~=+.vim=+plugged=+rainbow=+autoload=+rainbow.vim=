@@ -33,7 +33,7 @@ setlocal balloonexpr=
 setlocal nobinary
 setlocal nobreakindent
 setlocal breakindentopt=
-setlocal bufhidden=
+setlocal bufhidden=hide
 setlocal buflisted
 setlocal buftype=
 setlocal nocindent
@@ -66,7 +66,7 @@ setlocal foldcolumn=0
 setlocal foldenable
 setlocal foldexpr=0
 setlocal foldignore=#
-setlocal foldlevel=0
+setlocal foldlevel=1
 setlocal foldmarker={{{,}}}
 setlocal foldmethod=syntax
 setlocal foldminlines=1
@@ -119,7 +119,7 @@ setlocal spellfile=
 setlocal spelllang=en
 setlocal statusline=%!py3eval('powerline.statusline(1)')
 setlocal suffixesadd=
-setlocal swapfile
+setlocal noswapfile
 setlocal synmaxcol=3000
 if &syntax != 'vim'
 setlocal syntax=vim
@@ -141,13 +141,12 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 241 - ((42 * winheight(0) + 21) / 43)
+let s:l = 93 - ((39 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-241
+93
 normal! 0
-lcd ~/
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

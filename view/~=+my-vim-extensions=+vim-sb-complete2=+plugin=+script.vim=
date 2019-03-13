@@ -27,13 +27,13 @@ let &cpo=s:cpo_save
 unlet s:cpo_save
 setlocal keymap=
 setlocal noarabic
-setlocal noautoindent
+setlocal autoindent
 setlocal backupcopy=
 setlocal balloonexpr=
 setlocal nobinary
 setlocal nobreakindent
 setlocal breakindentopt=
-setlocal bufhidden=
+setlocal bufhidden=hide
 setlocal buflisted
 setlocal buftype=
 setlocal nocindent
@@ -52,7 +52,7 @@ setlocal cryptmethod=
 setlocal nocursorbind
 setlocal nocursorcolumn
 setlocal cursorline
-setlocal define=
+setlocal define=^\\s*#\\s*define
 setlocal dictionary=
 setlocal nodiff
 setlocal equalprg=
@@ -66,7 +66,7 @@ setlocal foldcolumn=0
 setlocal foldenable
 setlocal foldexpr=0
 setlocal foldignore=#
-setlocal foldlevel=0
+setlocal foldlevel=1
 setlocal foldmarker={{{,}}}
 setlocal foldmethod=syntax
 setlocal foldminlines=1
@@ -79,10 +79,10 @@ setlocal formatprg=
 setlocal grepprg=
 setlocal iminsert=0
 setlocal imsearch=-1
-setlocal include=
+setlocal include=^\\s*#\\s*include
 setlocal includeexpr=
 setlocal indentexpr=GetVimIndent()
-setlocal indentkeys=0{,0},:,0#,!^F,o,O,e,=end,=else,=cat,=fina,=END,0\\
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e,[,(,{,),},],&,=\\bibitem,=\\item,=end,=else,=cat,=fina,=END,0\\
 setlocal noinfercase
 setlocal iskeyword=@,48-57,_,192-255,:,#
 setlocal keywordprg=:help
@@ -111,7 +111,7 @@ setlocal noscrollbind
 setlocal shiftwidth=2
 setlocal noshortname
 setlocal signcolumn=auto
-setlocal smartindent
+setlocal nosmartindent
 setlocal softtabstop=2
 setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
@@ -119,7 +119,7 @@ setlocal spellfile=
 setlocal spelllang=en
 setlocal statusline=%!py3eval('powerline.statusline(1)')
 setlocal suffixesadd=
-setlocal swapfile
+setlocal noswapfile
 setlocal synmaxcol=3000
 if &syntax != 'vim'
 setlocal syntax=vim
@@ -141,13 +141,12 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 241 - ((42 * winheight(0) + 21) / 43)
+let s:l = 15 - ((8 * winheight(0) + 22) / 45)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-241
-normal! 0
-lcd ~/
+15
+normal! 058|
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :
